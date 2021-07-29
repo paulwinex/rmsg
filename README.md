@@ -28,4 +28,4 @@ r.watch()
 You can create any count of senders with same queue name. Each of them will be sending messages to one queue.
 
 You can create any count of receivers, but one message can receive only one receiver. 
-Therefore, receivers will process messages one after another.
+Therefore, receivers will process messages one after another in turn like distributed workers.
