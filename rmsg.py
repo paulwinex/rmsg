@@ -42,9 +42,9 @@ class Receiver:
         self.callback = callback
         self.threaded = threaded
         if self.threaded:
-            self.consumer = RedisSMQConsumerThread(channel_name, self._on_receive, host='localhost')
+            self.consumer = RedisSMQConsumerThread(channel_name, self._on_receive, host=redis_host, port=redis_port)
         else:
-            self.consumer = RedisSMQConsumer(channel_name, self._on_receive, host='localhost', realtime=True)
+            self.consumer = RedisSMQConsumer(channel_name, self._on_receive, host=redis_host, port=redis_port)
 
     def watch(self):
         try:
