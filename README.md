@@ -2,6 +2,8 @@
 
 Simple message queue based on the Redis and PyRSMQ. 
 
+(This is just test prototype. Don't use it in you projects!)
+
 ### Example
 
 First host
